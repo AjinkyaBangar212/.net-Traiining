@@ -33,7 +33,7 @@ namespace SampleWinform
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtname = new System.Windows.Forms.TextBox();
+            this.pname = new System.Windows.Forms.TextBox();
             this.txtprice = new System.Windows.Forms.TextBox();
             this.btnBinaryWrite = new System.Windows.Forms.Button();
             this.btnBinaryRead = new System.Windows.Forms.Button();
@@ -81,13 +81,14 @@ namespace SampleWinform
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txtname
+            // pname
             // 
-            this.txtname.Location = new System.Drawing.Point(335, 82);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(100, 22);
-            this.txtname.TabIndex = 4;
+            this.pname.Location = new System.Drawing.Point(335, 82);
+            this.pname.Name = "pname";
+            this.pname.Size = new System.Drawing.Size(100, 22);
+            this.pname.TabIndex = 4;
             // 
             // txtprice
             // 
@@ -104,6 +105,7 @@ namespace SampleWinform
             this.btnBinaryWrite.TabIndex = 6;
             this.btnBinaryWrite.Text = "Binary Write";
             this.btnBinaryWrite.UseVisualStyleBackColor = true;
+            this.btnBinaryWrite.Click += new System.EventHandler(this.btnBinaryWrite_Click);
             // 
             // btnBinaryRead
             // 
@@ -113,6 +115,7 @@ namespace SampleWinform
             this.btnBinaryRead.TabIndex = 7;
             this.btnBinaryRead.Text = "Binary Read";
             this.btnBinaryRead.UseVisualStyleBackColor = true;
+            this.btnBinaryRead.Click += new System.EventHandler(this.btnBinaryRead_Click);
             // 
             // btnXMLRead
             // 
@@ -122,6 +125,7 @@ namespace SampleWinform
             this.btnXMLRead.TabIndex = 9;
             this.btnXMLRead.Text = "XML Read";
             this.btnXMLRead.UseVisualStyleBackColor = true;
+            this.btnXMLRead.Click += new System.EventHandler(this.btnXMLRead_Click);
             // 
             // btnXMLWrite
             // 
@@ -139,8 +143,9 @@ namespace SampleWinform
             this.btnXMLRead1.Name = "btnXMLRead1";
             this.btnXMLRead1.Size = new System.Drawing.Size(144, 23);
             this.btnXMLRead1.TabIndex = 11;
-            this.btnXMLRead1.Text = "XML Read";
+            this.btnXMLRead1.Text = "SOAP Read";
             this.btnXMLRead1.UseVisualStyleBackColor = true;
+            this.btnXMLRead1.Click += new System.EventHandler(this.btnXMLRead1_Click);
             // 
             // btnSOAPWrite
             // 
@@ -150,6 +155,7 @@ namespace SampleWinform
             this.btnSOAPWrite.TabIndex = 10;
             this.btnSOAPWrite.Text = "SOAP Write";
             this.btnSOAPWrite.UseVisualStyleBackColor = true;
+            this.btnSOAPWrite.Click += new System.EventHandler(this.btnSOAPWrite_Click);
             // 
             // btnJSONRead
             // 
@@ -159,6 +165,7 @@ namespace SampleWinform
             this.btnJSONRead.TabIndex = 13;
             this.btnJSONRead.Text = "JSON Read";
             this.btnJSONRead.UseVisualStyleBackColor = true;
+            this.btnJSONRead.Click += new System.EventHandler(this.btnJSONRead_Click);
             // 
             // btnJSONWrite
             // 
@@ -168,6 +175,7 @@ namespace SampleWinform
             this.btnJSONWrite.TabIndex = 12;
             this.btnJSONWrite.Text = "JSON Write";
             this.btnJSONWrite.UseVisualStyleBackColor = true;
+            this.btnJSONWrite.Click += new System.EventHandler(this.btnJSONWrite_Click);
             // 
             // Form3
             // 
@@ -183,7 +191,7 @@ namespace SampleWinform
             this.Controls.Add(this.btnBinaryRead);
             this.Controls.Add(this.btnBinaryWrite);
             this.Controls.Add(this.txtprice);
-            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.pname);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,7 +209,7 @@ namespace SampleWinform
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox pname;
         private System.Windows.Forms.TextBox txtprice;
         private System.Windows.Forms.Button btnBinaryWrite;
         private System.Windows.Forms.Button btnBinaryRead;
