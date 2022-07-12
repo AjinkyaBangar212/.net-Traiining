@@ -153,7 +153,7 @@ namespace SampleWinform
                 fs = new FileStream(@"E:\ProductSOAP", FileMode.Create, FileAccess.Write);
                 SoapFormatter sf = new SoapFormatter();
                 sf.Serialize(fs, prod);
-                MessageBox.Show("XML File Created");
+                MessageBox.Show("SOAP File Created");
             }
             catch (Exception ex)
             {
@@ -199,7 +199,7 @@ namespace SampleWinform
                 prod.Price = Convert.ToInt32(txtprice.Text);
                 fs = new FileStream(@"E:\ProductJSON", FileMode.Create, FileAccess.Write);
                 JsonSerializer.Serialize(fs, prod);
-                MessageBox.Show("XML File Created");
+                MessageBox.Show("Json File Created");
             }
             catch (Exception ex)
             {
